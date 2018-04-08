@@ -1,4 +1,3 @@
-import sys
 import csv
 from os import path
 
@@ -11,18 +10,18 @@ L_nutrients =   [   "Protein",
                 ]
 
 Nutrients = [
-	{ "name": "protein"},
-	{ "name": "vitaminC"},
-	{ "name": "vitaminA"},
-	{ "name": "calories"},
-	{ "name": "sodium"},
-	{ "name": "saturatedFat"}
+	{}, #{ "name": "protein"},
+	{}, #{ "name": "vitaminC"},
+	{}, #{ "name": "vitaminA"},
+	{}, #{ "name": "calories"},
+	{}, #{ "name": "sodium"},
+	{}, #{ "name": "saturatedFat"}
 ]
 
-L_foods = ['cheese', 'rice', 'beans', 'avocados', 'spinach']
+L_foods = ['cheese', 'rice', 'beans', 'avocado', 'spinach']
 
 def get_food_nutrients_from_csv(filename, nutrients):
-	file_path = path.relpath("../../Data/"+filename+".csv")
+	file_path = path.relpath("../Data/"+filename+".csv")
 	with open(file_path, 'rU') as csvfile:
 		reader = csv.reader(csvfile)
 		for row in reader:
@@ -30,7 +29,7 @@ def get_food_nutrients_from_csv(filename, nutrients):
 					continue
 			if row[0] in L_nutrients:
 				item_index = L_nutrients.index(row[0])
-				nutrients[item_index][filename] = row[4]
+				nutrients[item_index][filename] = float(row[4])
 	return nutrients 
 
 def get_food_list(foods, nutrients):
@@ -41,4 +40,4 @@ def get_food_list(foods, nutrients):
 def get_data():
     return get_food_list(L_foods, Nutrients)
 
-print(get_data())
+#print(get_data())
