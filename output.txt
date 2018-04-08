@@ -1,0 +1,36 @@
+My LP Problem:
+MINIMIZE
+2.5*Foods_avocado + 1.0*Foods_beans + 7.71*Foods_cheese + 1.0*Foods_rice + 7.0*Foods_spinach + 0.0
+SUBJECT TO
+Amount_protein: 2.67 Foods_avocado + 10 Foods_beans + 7 Foods_cheese
+ + 3 Foods_rice + 9.72 Foods_spinach >= 56
+
+Amount_vitamin_C: 12 Foods_avocado + 95.5 Foods_spinach >= 90
+
+Amount_vitamin_A: 200 Foods_avocado + 589 Foods_cheese + 31882 Foods_spinach
+ >= 700
+
+Amount_calories: 227 Foods_avocado + 150 Foods_beans + 110 Foods_cheese
+ + 150 Foods_rice + 78 Foods_spinach = 2000
+
+Amount_sodium: 11 Foods_avocado + 341 Foods_beans + 180 Foods_cheese
+ + 269 Foods_spinach <= 2400
+
+Amount_saturated_fat: 2.891 Foods_avocado + 5.001 Foods_cheese
+ + 0.214 Foods_spinach <= 20
+
+VARIABLES
+Foods_avocado Continuous
+Foods_beans Continuous
+Foods_cheese Continuous
+Foods_rice Continuous
+Foods_spinach Continuous
+
+1
+Optimal
+Foods_avocado = 0.0
+Foods_beans = 1.1871354
+Foods_cheese = 0.0
+Foods_rice = 11.656146
+Foods_spinach = 0.94240838
+19.44014006
