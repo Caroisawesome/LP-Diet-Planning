@@ -1,6 +1,6 @@
 My LP Problem:
 MINIMIZE
-2.5*Foods_avocado + 1.0*Foods_beans + 7.71*Foods_cheese + 1.0*Foods_rice + 7.0*Foods_spinach + 0.0
+0.7495716418529059*Foods_avocado + 0.2866009218849346*Foods_beans + 0.4759339001270745*Foods_cheese + 0.09259414399359425*Foods_rice + 5.247001492970341*Foods_spinach + 0.0
 SUBJECT TO
 Amount_protein: 2.67 Foods_avocado + 10 Foods_beans + 7 Foods_cheese
  + 3 Foods_rice + 9.72 Foods_spinach >= 56
@@ -33,4 +33,4 @@ Foods_beans = 1.1871354
 Foods_cheese = 0.0
 Foods_rice = 11.656146
 Foods_spinach = 0.94240838
-19.44014006
+6.36434313802436

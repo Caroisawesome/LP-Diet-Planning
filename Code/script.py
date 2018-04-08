@@ -5,12 +5,14 @@ NUTRITION_FACTS = get_data()
 
 FOODS = ["avocado", "beans", "cheese", "rice", "spinach"] 
 
-FOOD_COSTS =    {   ### everything is per pound (lb)
-                    "avocado": 1.25 * 2, # 1.25 avos * (2 avos per pound )
-                    "beans": 1.0, 
-                    "cheese": 7.71,
-                    "rice": 1.0,
-                    "spinach": 7.0
+pound_per_gram = 1 / 453.5924
+
+FOOD_COSTS =    {   ### cost per pound * pound per gram * number of grams the nutrition data is based on
+                    "avocado": (1.25 * 2) * pound_per_gram * 136, # 1.25 avos * (2 avos per pound )
+                    "beans": 1.0 * pound_per_gram * 130, 
+                    "cheese": 7.71 * pound_per_gram * 28,
+                    "rice": 1.0 * pound_per_gram * 42,
+                    "spinach": 7.0 * pound_per_gram * 340
                 }
 
 DAILY_NUTRITION =   {
