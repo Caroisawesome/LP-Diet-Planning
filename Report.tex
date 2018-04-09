@@ -1,0 +1,151 @@
+\documentclass[paper=a4, fontsize=11pt]{scrartcl}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref,subfig}
+
+\usepackage[english]{babel}															% English language/hyphenation
+\usepackage[protrusion=true,expansion=true]{microtype}	
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[pdftex]{graphicx}	
+\usepackage{url}
+
+
+%%% Custom sectioning
+\usepackage{sectsty}
+\allsectionsfont{\centering \normalfont\scshape}
+
+
+%%% Custom headers/footers (fancyhdr package)
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}											% No page header
+\fancyfoot[L]{}											% Empty 
+\fancyfoot[C]{}											% Empty
+\fancyfoot[R]{\thepage}									% Pagenumbering
+\renewcommand{\headrulewidth}{0pt}			% Remove header underlines
+\renewcommand{\footrulewidth}{0pt}				% Remove footer underlines
+\setlength{\headheight}{13.6pt}
+
+
+%%% Equation and float numbering
+\numberwithin{equation}{section}		% Equationnumbering: section.eq#
+\numberwithin{figure}{section}			% Figurenumbering: section.fig#
+\numberwithin{table}{section}				% Tablenumbering: section.tab#
+
+
+%%% Maketitle metadata
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
+
+\title{
+		%\vspace{-1in} 	
+		\usefont{OT1}{bch}{b}{n}
+		\normalfont \normalsize \textsc{CS 362 - Algorithms and Data Structures II} \\ [25pt]
+		\horrule{0.5pt} \\[0.4cm]
+		\huge Project 2 - Linear Programming \\
+		\horrule{2pt} \\[0.5cm]
+}
+\author{
+		\normalfont 								\normalsize
+        Carolyn Atterbury\\[-3pt]		\normalsize
+        \today
+}
+\date{}
+
+
+%%% Begin document
+\begin{document}
+\maketitle
+\section{Setup}
+Using data from the United States Department of Agriculture (https://ndb.nal.usda.gov/ndb/), I downloaded nutritional information for five food items, and stored them in $.csv$ format in the /Data section of my project directory. The food items are avocado, beans, rice, cheese, and spinach. I imported the $.csv$ files using Python in /Code/parse\_data.py, and organized the nutritional information according to certain nutritional properties: Protien, Calories, Vitamin C, Vitamin D, Sodium, and Saturated Fat. In the /Code/script.py file, I imported the organized data, in addition to the PulP library to manage the details of the linear program. From there I set up the various food items as variables, added an objective function of the costs associated with the different variables, and specified that I wanted to minimize the objective function. The nutritional information was added as contraints in the linear program. 
+
+
+\subsection{Nutritional Information}
+blah blah \autoref{Fig:Foods} lakdjf;a a;lsdkfjdkd 
+
+\begin{figure}
+  \subfloat[Nutritional Information]{
+    \begin{tabular}{ l | l l l l l }
+      \hline
+       & Cheese & Rice & Beans & Avocado & Spinach\\
+
+      \hline \hline
+      Serving Size (g) & 28.0 & 42.0 & 130.0 & 136.0 & 340.0 \\
+      Protein & 7.0 & 3.0 & 10.0 & 2.67 & 9.72\\ 
+      Calories & 110.0 & 150.0 & 150.0 & 227.0 & 78.0 \\
+      Sodium & 180.0 & 0.0 & 341.0 & 11.0 & 269.0\\ 
+      Vitamin A & 589.0 & 0.0 & 0.0 & 200.0 & 31882.0 \\
+      Vitamin C & 0.0 & 0.0 & 0.0 & 12.0 & 95.5\\
+      Saturated Fat & 5.001 & 0.0 & 0.0 & 2.891 & 0.214 \\
+      \hline
+  \end{tabular}}
+
+  \subfloat[Food Costs]{
+    \begin{tabular}{ l | c }
+      Food & Dollar cost per pound  \\
+      \hline \hline
+      Cheese & 7.71 \\
+      Rice & 1.00 \\
+      Beans & 1.00 \\
+      Avocado & 1.25 \\
+      Spinach & 7.00 \\
+      \hline
+  \end{tabular}}
+
+  \caption{Global Caption TODO}
+  \label{Fig:Foods}
+\end{figure}
+
+\subsection{Variables}
+
+\subsection{Objective Function}
+
+\subsection{Constraints}
+
+\section{Results}
+
+\section{Menu}
+
+
+\begin{align} 
+	\begin{split}
+	(x+y)^3 	&= (x+y)^2(x+y)\\
+					&=(x^2+2xy+y^2)(x+y)\\
+					&=(x^3+2x^2y+xy^2) + (x^2y+2xy^2+y^3)\\
+					&=x^3+3x^2y+3xy^2+y^3
+	\end{split}					
+\end{align}
+Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies 
+
+\subsection{Heading on level 2 (subsection)}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+
+\subsubsection{Heading on level 3 (subsubsection)}
+Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+
+\paragraph{Heading on level 4 (paragraph)}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+
+
+\section{Lists}
+
+\subsection{Example for list (3*itemize)}
+\begin{itemize}
+	\item First item in a list 
+		\begin{itemize}
+		\item First item in a list 
+			\begin{itemize}
+			\item First item in a list 
+			\item Second item in a list 
+			\end{itemize}
+		\item Second item in a list 
+		\end{itemize}
+	\item Second item in a list 
+\end{itemize}
+
+\subsection{Example for list (enumerate)}
+\begin{enumerate}
+	\item First item in a list 
+	\item Second item in a list 
+	\item Third item in a list
+\end{enumerate}
+%%% End document
+\end{document}

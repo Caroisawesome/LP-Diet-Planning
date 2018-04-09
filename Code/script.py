@@ -8,7 +8,7 @@ FOODS = ["avocado", "beans", "cheese", "rice", "spinach"]
 pound_per_gram = 1 / 453.5924
 
 FOOD_COSTS =    {   ### cost per pound * pound per gram * number of grams the nutrition data is based on
-                    "avocado": (1.25 * 2) * pound_per_gram * 136, # 1.25 avos * (2 avos per pound )
+                    "avocado": (1.25 * 2) * pound_per_gram * 136, # 1.25 avos * (2 avos per pound ) * lb per gram * number of grams
                     "beans": 1.0 * pound_per_gram * 130, 
                     "cheese": 7.71 * pound_per_gram * 28,
                     "rice": 1.0 * pound_per_gram * 42,
