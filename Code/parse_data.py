@@ -18,7 +18,7 @@ Nutrients = [
 	{}, #{ "name": "saturatedFat"}
 ]
 
-L_foods = ['cheese', 'rice', 'beans', 'avocado', 'spinach']
+L_foods = ["avocado", "beans", "cheese", "rice", "spinach"] 
 
 def get_food_nutrients_from_csv(filename, nutrients):
 	file_path = path.relpath("../Data/"+filename+".csv")
