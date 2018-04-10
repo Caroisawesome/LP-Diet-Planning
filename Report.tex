@@ -74,14 +74,15 @@ To run the program, unzip the file and run the following commands:
 See \autoref{Fig:Foods} for details on the nutritional content of the five target foods, and the cost of each of the food items.
 
 \begin{figure}
-  \subfloat[Nutritional Information]{
+  \subfloat[Nutritional Information in milligrams]{
     \begin{tabular}{ l | l l l l l }
       \hline
        & Cheese & Rice & Beans & Avocado & Spinach\\
 
       \hline \hline
       Serving Size (g) & 28.0 & 42.0 & 130.0 & 136.0 & 340.0 \\
-      Protein & 7.0 & 3.0 & 10.0 & 2.67 & 9.72\\ 
+      \hline
+      Protein  & 7.0 & 3.0 & 10.0 & 2.67 & 9.72\\ 
       Calories & 110.0 & 150.0 & 150.0 & 227.0 & 78.0 \\
       Sodium & 180.0 & 0.0 & 341.0 & 11.0 & 269.0\\ 
       Vitamin A & 589.0 & 0.0 & 0.0 & 200.0 & 31882.0 \\
@@ -161,7 +162,7 @@ Six contraints were added to the linear program - one for each nutritional prope
 \end{align}
 
 \section{Results}
-The minimal possible cost found to meet the daily nutritional quotas with the five selected foods was \$6.36. Avocado and Cheese did not have a good price compared to nutritional content, so they were left out of the final result. The optimal diet per day is to eat 1.18 servings of beans, 11.65 servings of rice, and 0.94 servings of spinach.
+The minimal possible cost found to meet the daily nutritional quotas with the five selected foods was \$6.36. Avocado and Cheese did not have a good price compared to nutritional content, so they were left out of the final result. The optimal diet per day is to eat 1.18 servings of beans, 11.65 servings of rice, and 0.94 servings of spinach. The final amounts of each of the nutrients are given in \eqref{eq:finalnutrients}.
 
 The final output of the program:
 
@@ -174,6 +175,18 @@ Foods_rice = 11.656146
 Foods_spinach = 0.94240838
 6.36434313802436
 \end{lstlisting}
+
+\begin{align}
+  \begin{split}
+    Sodium &= 658.32 \\
+    Vitamin C &= 90.00\\
+    Protein &= 56.00\\
+    Vitamin A &= 30045.86\\
+    Calories &= 2000.00\\
+    Saturated Fat &= 0.20\\
+  \end{split}
+  \label{eq:finalnutrients}
+\end{align}
 
 \section{Menu}
 
