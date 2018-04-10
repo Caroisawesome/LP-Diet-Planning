@@ -33,4 +33,8 @@ Foods_beans = 1.1871354
 Foods_cheese = 0.0
 Foods_rice = 11.656146
 Foods_spinach = 0.94240838
-6.36434313802436
+******
+OBJECTIVE 6.36434313802436
+*****
+{(658.32102562, 'sodium'), (2000.00006364, 'calories'), (56.00000145360001, 'protein'), (90.00000029, 'vitaminC'), (30045.86397116, 'vitaminA'), (0.20167539332, 'saturatedFat')}
+*****
