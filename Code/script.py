@@ -48,7 +48,28 @@ print(my_lp_problem)
 print(my_lp_problem.solve())
 print(LpStatus[my_lp_problem.status])
 
+vars_dict = {}
 for variable in my_lp_problem.variables():
+    vars_dict[variable.name] = variable.varValue
     print("{} = {}".format(variable.name, variable.varValue))
 
-print(value(my_lp_problem.objective))
+
+print("******")
+#print(my_lp_problem.constraints)
+print("OBJECTIVE",value(my_lp_problem.objective))
+
+print("*****")
+
+## print out final nutrient values
+final_nutrients = []
+nutrient_names = ["protein", "vitaminC", "vitaminA", "calories", "sodium", "saturatedFat"]
+for nutr_obj in NUTRITION_FACTS:
+    val = 0
+    for field in nutr_obj:
+        val += nutr_obj[field] * vars_dict["Foods_"+field]
+    final_nutrients.append(val)
+
+zipped = zip(final_nutrients, nutrient_names)
+result = set(zipped)
+print(result)
+print("*****")
